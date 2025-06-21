@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">		
+		<!-- FAVICON - AGGIUNGI QUESTE RIGHE -->
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+		<link rel="shortcut icon" href="favicon.png">		
+		<title>StudentiUniti</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	</head>
+	
+
+	<title>Corsi di Studio - Il Gruppo dello Studente</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<div class="nav-container">
+				<div class="nav-logo">
+					<i class="fas fa-graduation-cap"></i>
+					<span>Il Gruppo dello Studente</span>
+				</div>
+				<ul class="nav-menu">
+					<li><a href="index.html" class="nav-link">Home</a></li>
+					<li><a href="corsi.html" class="nav-link active">Corsi di Studio</a></li>
+					<li><button id="theme-toggle" class="theme-toggle">
+						<i class="fas fa-moon"></i>
+					</button></li>
+				</ul>
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section class="courses-header">
+			<div class="container">
+				<h1>Corsi di Studio</h1>
+				<p>Trova il gruppo WhatsApp e le risorse per il tuo corso di laurea</p>
+				<div class="search-box">
+					<input type="text" id="courseSearch" placeholder="Cerca il tuo corso (es. L-10, Informatica, Economia...)">
+					<i class="fas fa-search"></i>
+				</div>
+			</div>
+		</section>
+
+		<section class="courses-grid">
+			<div class="container">
+				<div id="coursesContainer" class="courses-container">
+					<!-- I corsi verranno generati dinamicamente -->
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-main">
+					<p>Creato con <i class="fas fa-heart"></i> da 
+						<a href="https://github.com/Gabro23" 
+						   target="_blank" 
+						   rel="noopener noreferrer"
+						   class="github-link"
+						   title="Profilo GitHub">
+							<i class="fab fa-github"></i>
+							Gabriele Minissale
+						</a> 
+						per la comunità studentesca
+					</p>
+				</div>
+				
+				<div class="social-links">
+					<h4>Seguimi sui social</h4>
+					<div class="social-icons">
+						<a href="https://www.tiktok.com/@laura_inprogress?_t=ZN-8xJ8P3zfkrX&_r=1" 
+						   target="_blank" 
+						   rel="noopener noreferrer"
+						   class="social-link tiktok"
+						   title="Seguici su TikTok">
+							<i class="fab fa-tiktok"></i>
+							<span>TikTok</span>
+						</a>
+						
+						<a href="https://www.instagram.com/lalli_inprogress?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+						   target="_blank" 
+						   rel="noopener noreferrer"
+						   class="social-link instagram"
+						   title="Seguici su Instagram">
+							<i class="fab fa-instagram"></i>
+							<span>Instagram</span>
+						</a>
+					</div>
+					
+					<p class="social-desc">Per consigli di studio e motivazione!</p>
+				</div>
+			</div>
+	</footer>
+	<script src="script.js"></script>
+	</body>
+	</html>

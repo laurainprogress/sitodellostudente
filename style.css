@@ -46,6 +46,15 @@ body {
 	padding: 0 20px;
 }
 
+#disqus_thread{
+	width: 70vw;
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	margin: auto; padding-bottom: 40px; 
+	padding-top: 40px;
+}
+
 /* Header e Navigation */
 .navbar {
 	background-color: var(--bg-color);
@@ -701,7 +710,13 @@ footer {
 
 .social-links {
 	flex: 1;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	gap: 20px;
+	align-items: center;
 }
+
 
 .social-links h4 {
 	color: var(--accent-color);

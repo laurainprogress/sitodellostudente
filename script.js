@@ -1,5 +1,5 @@
-// Dati dei corsi di studio con link WhatsApp e Drive personalizzati
-const corsiDiStudio = [
+// Dati dei corsi di laurea triennale
+const corsiTriennali = [
 	{ 
 		codice: 'L-3', 
 		nome: 'Scienze e Tecnologie delle Arti, dello Spettacolo e del Cinema',
@@ -18,7 +18,6 @@ const corsiDiStudio = [
 		whatsapp: 'https://chat.whatsapp.com/LGaBdes7vWa3mwuhKX5cVF',
 		drive: 'https://drive.google.com/drive/folders/1MZ6NY1sqB27TG6CWzodVZIB2aAvhdU8j?usp=drive_link'
 	},
-
 	{ 
 		codice: 'L-7', 
 		nome: 'Ingegneria Civile',
@@ -99,7 +98,7 @@ const corsiDiStudio = [
 	},
 	{ 
 		codice: 'L-26', 
-		nome: 'Scienze dell\Alimentazione e Gastronomia',
+		nome: 'Scienze dell\'Alimentazione e Gastronomia',
 		whatsapp: 'https://chat.whatsapp.com/GihXsWDLkto3JN0IvAtB5H',
 		drive: 'https://drive.google.com/drive/folders/1Ar8PtUiQ5LLj2AElLoxabEO_k2_EFYlZ?usp=drive_link'
 	},
@@ -138,6 +137,70 @@ const corsiDiStudio = [
 		nome: 'Giurisprudenza',
 		whatsapp: 'https://chat.whatsapp.com/HdegHUZaldzCe7JC8GrzYL',
 		drive: 'https://drive.google.com/drive/folders/1C7nYeDsjEg-OOJdaDic9jCm3hUyfsjIV?usp=drive_link'
+	}
+];
+
+// Dati dei corsi di laurea magistrale 
+const corsiMagistrali = [
+	{ 
+		codice: 'LM-26', 
+		nome: 'Ingegneria della Sicurezza',
+		whatsapp: 'https://chat.whatsapp.com/LszZvhgVkKX6aAuJsHztkL'
+	},
+	{ 
+		codice: 'LM-31', 
+		nome: 'Ingegneria Gestionale',
+		whatsapp: 'https://chat.whatsapp.com/D7pED6EmskcAkEDlWLs6Vq'
+	},
+	{ 
+		codice: 'LM-39', 
+		nome: 'Linguistica Moderna',
+		whatsapp: 'https://chat.whatsapp.com/IccdJqae2RIJYQ53tQRuP3'
+	},
+	{ 
+		codice: 'LM-47', 
+		nome: 'Management dello Sport e delle Attività Motorie',
+		whatsapp: 'https://chat.whatsapp.com/BJHAppvwWLBHtEb9cAMBAb'
+	},
+	{ 
+		codice: 'LM-51', 
+		nome: 'Psicologia del Lavoro e delle Organizzazioni',
+		whatsapp: 'https://chat.whatsapp.com/KSexXEGhdKqC0BocA2Q2Xr'
+	},
+	{ 
+		codice: 'LM-52', 
+		nome: 'Relazioni Internazionali per lo Sviluppo Economico',
+		whatsapp: 'https://chat.whatsapp.com/BAmSFUGEEGS78xYs7FZqCO'
+	},
+	{ 
+		codice: 'LM-56', 
+		nome: 'Economiam Digital Data Analysis, Amministrazioni Pubbliche',
+		whatsapp: 'https://chat.whatsapp.com/JsTcv3jgLJo1Vjecub9XNT'
+	},
+	{ 
+		codice: 'LM-59', 
+		nome: 'Comunicazione Digitale e Marketing',
+		whatsapp: 'https://chat.whatsapp.com/E6NYMpSybW50CxIMIyaGEY'
+	},
+	{ 
+		codice: 'LM-61', 
+		nome: 'Scienze della Nutrizione Umana',
+		whatsapp: 'https://chat.whatsapp.com/KQ29HfBatNS2IP7GMJKkA3'
+	},
+	{ 
+		codice: 'LM-67', 
+		nome: 'Scienze e Tecniche delle Attività Motorie Preventive e Adattate',
+		whatsapp: 'https://chat.whatsapp.com/CMv3pjyjpWi83dasfXATU1'
+	},
+	{ 
+		codice: 'LM-77', 
+		nome: 'Management',
+		whatsapp: 'https://chat.whatsapp.com/IWHOrnWi4XhI2DIi69x72J'
+	},
+	{ 
+		codice: 'LM-85', 
+		nome: 'Scienze Pedagogiche',
+		whatsapp: 'https://chat.whatsapp.com/Htwmtx2LgfMDsiRdSnxZz1'
 	}
 ];
 
@@ -217,7 +280,7 @@ class CoursesManager {
 
 	init() {
 		if (this.coursesContainer) {
-			this.renderCourses(corsiDiStudio);
+			this.renderAllCourses();
 		}
 
 		if (this.searchInput) {
@@ -225,14 +288,38 @@ class CoursesManager {
 		}
 	}
 
-	renderCourses(courses) {
-		this.coursesContainer.innerHTML = courses.map(corso => `
+	renderAllCourses() {
+		this.coursesContainer.innerHTML = `
+			<div class="courses-section">
+				<div class="section-header">
+					<h2><i class="fas fa-graduation-cap"></i> Corsi di Laurea Triennale</h2>
+					<p>Trova il gruppo WhatsApp e le risorse per il tuo corso di laurea triennale</p>
+				</div>
+				<div class="courses-grid" id="triennaliGrid">
+					${this.renderCourses(corsiTriennali, true)}
+				</div>
+			</div>
+
+			<div class="courses-section">
+				<div class="section-header">
+					<h2><i class="fas fa-user-graduate"></i> Corsi di Laurea Magistrale</h2>
+					<p>Connettiti con altri studenti magistrali del tuo corso di studio</p>
+				</div>
+				<div class="courses-grid" id="magistraliGrid">
+					${this.renderCourses(corsiMagistrali, false)}
+				</div>
+			</div>
+		`;
+	}
+
+	renderCourses(courses, hasDrive = true) {
+		return courses.map(corso => `
 			<div class="course-card" data-course="${corso.codice.toLowerCase()} ${corso.nome.toLowerCase()}">
 				<div class="course-header">
-					<span class="course-code">${corso.codice}</span>
+					<span class="course-code ${hasDrive ? 'triennale' : 'magistrale'}">${corso.codice}</span>
 					<h3 class="course-name">${corso.nome}</h3>
 				</div>
-				<div class="course-links">
+				<div class="course-links ${hasDrive ? 'two-links' : 'one-link'}">
 					${corso.whatsapp ? `
 						<a href="${corso.whatsapp}" 
 						   class="course-link whatsapp-link" 
@@ -249,14 +336,14 @@ class CoursesManager {
 							Gruppo Generale
 						</a>
 					`}
-					${corso.drive ? `
+					${hasDrive && corso.drive ? `
 						<a href="${corso.drive}" 
 						   class="course-link drive-link" 
 						   target="_blank">
 							<i class="fab fa-google-drive"></i>
 							Appunti Drive
 						</a>
-					` : `
+					` : hasDrive ? `
 						<a href="${DEFAULT_DRIVE}" 
 						   class="course-link drive-link" 
 						   target="_blank" 
@@ -264,7 +351,7 @@ class CoursesManager {
 							<i class="fab fa-google-drive"></i>
 							Drive Generale
 						</a>
-					`}
+					` : ''}
 				</div>
 			</div>
 		`).join('');

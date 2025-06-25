@@ -448,28 +448,78 @@ main {
 	color: var(--text-light);
 }
 
-.courses-grid {
-	padding: 50px 0;
-	background-color: #f8fafc;
+/* ====================== */
+/* SEZIONE CORSI MODIFICATA */
+/* ====================== */
+
+.courses-container {
+	display: block;
 }
 
-[data-theme="dark"] .courses-grid {
+.courses-section {
+	margin-bottom: 60px;
+	background-color: #f8fafc;
+	padding: 30px 0 50px;
+}
+
+[data-theme="dark"] .courses-section {
 	background-color: var(--bg-color);
 }
 
-.courses-container {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-	gap: 25px;
+.section-header {
+	text-align: center;
+	margin-bottom: 40px;
+	padding: 20px;
+	border-bottom: 2px solid var(--border-color);
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
+.section-header h2 {
+	font-size: 2.2rem;
+	color: var(--accent-color);
+	margin-bottom: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+}
+
+.section-header h2 i {
+	color: var(--primary-color);
+	font-size: 2rem;
+}
+
+.section-header p {
+	color: var(--text-light);
+	font-size: 1.1rem;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+/* GRIGLIA CORSI - MODIFICATA PER AVERE CARD PIÙ LARGHE */
+.courses-grid {
+	display: grid;
+	grid-template-columns: 1fr; /* Una sola colonna per default */
+	gap: 20px;
+	padding: 0 20px;
+	max-width: 900px;
+	margin: 0 auto;
+	background-color: transparent;
+}
+
+/* CARD DEI CORSI - MODIFICATE PER ESSERE RETTANGOLARI */
 .course-card {
 	background-color: var(--bg-color);
 	border: 2px solid var(--border-color);
 	border-radius: 12px;
-	padding: 25px;
+	padding: 25px 30px;
 	box-shadow: var(--shadow);
 	transition: var(--transition);
+	display: flex;
+	flex-direction: column;
+	min-height: 160px;
 }
 
 [data-theme="dark"] .course-card {
@@ -485,7 +535,7 @@ main {
 .course-header {
 	display: flex;
 	align-items: flex-start;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	gap: 15px;
 }
 
@@ -501,8 +551,25 @@ main {
 	min-width: fit-content;
 }
 
+.course-code.triennale {
+	background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.course-code.magistrale {
+	background: linear-gradient(135deg, #8B5CF6, #A78BFA);
+	position: relative;
+}
+
+.course-code.magistrale::after {
+	content: '🎓';
+	position: absolute;
+	right: -8px;
+	top: -5px;
+	font-size: 0.8rem;
+}
+
 .course-name {
-	font-size: 1.15rem;
+	font-size: 1.2rem;
 	font-weight: 600;
 	color: var(--text-color);
 	line-height: 1.4;
@@ -512,7 +579,23 @@ main {
 .course-links {
 	display: flex;
 	gap: 15px;
-	margin-top: 20px;
+	margin-top: auto;
+	padding-top: 20px;
+}
+
+/* Layout per link magistrali (solo WhatsApp) */
+.course-links.one-link {
+	justify-content: center;
+}
+
+.course-links.one-link .course-link {
+	flex: 0 1 auto;
+	min-width: 250px;
+	max-width: 400px;
+}
+
+.course-links.two-links {
+	justify-content: space-between;
 }
 
 .course-link {
@@ -520,13 +603,14 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 8px;
-	padding: 12px;
+	gap: 10px;
+	padding: 12px 20px;
 	text-decoration: none;
 	border-radius: var(--border-radius);
 	font-weight: 500;
 	transition: var(--transition);
 	border: 2px solid transparent;
+	min-width: 150px;
 }
 
 .whatsapp-link {
@@ -831,24 +915,46 @@ footer {
 
 /* RESPONSIVE DESIGN */
 
-/* Tablet grande */
-@media (max-width: 1024px) {
-	.features-grid {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 25px;
-	}
-	
-	.hero h1 {
-		font-size: 2.5rem;
-	}
-	
-	.courses-container {
-		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+/* Schermo grande e medio */
+@media (min-width: 768px) {
+	.courses-grid {
+		grid-template-columns: 1fr 1fr; /* 2 colonne su tablet */
 	}
 }
 
-/* Tablet e Mobile grande */
+@media (min-width: 1200px) {
+	.courses-grid {
+		grid-template-columns: 1fr 1fr 1fr; /* 3 colonne su desktop */
+		max-width: 1200px;
+	}
+}
+
 @media (max-width: 768px) {
+	.courses-section {
+		margin-bottom: 40px;
+		padding: 20px 0 30px;
+	}
+	
+	.section-header {
+		padding: 15px;
+		margin-bottom: 25px;
+	}
+	
+	.section-header h2 {
+		font-size: 1.8rem;
+		flex-direction: column;
+		gap: 10px;
+	}
+	
+	.section-header p {
+		font-size: 1rem;
+	}
+	
+	.course-links.one-link .course-link {
+		min-width: 200px;
+		max-width: 100%;
+	}
+
 	.container {
 		padding: 0 15px;
 	}
@@ -925,10 +1031,6 @@ footer {
 
 	.features h2 {
 		font-size: 2rem;
-	}
-	
-	.courses-container {
-		grid-template-columns: 1fr;
 	}
 
 	.course-links {
@@ -1063,6 +1165,16 @@ footer {
 	.social-link i {
 		font-size: 1.1rem;
 	}
+
+	.section-header h2 {
+		font-size: 1.6rem;
+	}
+	
+	.course-code.magistrale::after {
+		right: -6px;
+		top: -3px;
+		font-size: 0.7rem;
+	}
 }
 
 /* Mobile molto piccolo */
@@ -1134,3 +1246,4 @@ footer {
 		align-items: center;
 		justify-content: center;
 	}
+}

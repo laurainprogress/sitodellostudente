@@ -48,10 +48,10 @@ body {
 
 #disqus_thread{
 	width: 70vw;
-	display: flex; 
-	justify-content: center; 
-	align-items: center; 
-	margin: auto; padding-bottom: 40px; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto; padding-bottom: 40px;
 	padding-top: 40px;
 }
 
@@ -167,7 +167,7 @@ main {
 
 .hero-content {
 	text-align: center;
-	max-width: 800px;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
@@ -231,8 +231,79 @@ main {
 }
 
 .cta-section h3 {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	color: var(--accent-color);
+}
+
+.cta-subtitle {
+	color: var(--text-light);
+	margin-bottom: 30px;
+	font-size: 1.1rem;
+}
+
+/* Gruppi WhatsApp */
+.whatsapp-groups {
+	display: flex;
+	gap: 30px;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+.group-card {
+	background-color: var(--card-bg);
+	border: 2px solid var(--border-color);
+	border-radius: 15px;
+	padding: 30px;
+	max-width: 350px;
+	width: 100%;
+	box-shadow: var(--shadow);
+	transition: var(--transition);
+	text-align: center;
+}
+
+.group-card:hover {
+	transform: translateY(-5px);
+	box-shadow: var(--shadow-hover);
+	border-color: var(--accent-color);
+}
+
+.group-icon {
+	font-size: 3rem;
+	color: var(--primary-color);
+	margin-bottom: 20px;
+}
+
+.group-card h4 {
+	color: var(--accent-color);
+	font-size: 1.5rem;
+	margin-bottom: 15px;
+}
+
+.group-description {
+	color: var(--text-light);
+	margin-bottom: 15px;
+	font-weight: 500;
+}
+
+.universities-list {
+	list-style: none;
+	margin-bottom: 25px;
+	text-align: left;
+	display: inline-block;
+}
+
+.universities-list li {
+	padding: 5px 0;
+	color: var(--text-color);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.universities-list li i {
+	color: var(--primary-color);
+	font-size: 0.9rem;
 }
 
 .btn-primary {
@@ -248,12 +319,22 @@ main {
 	font-size: 1.1rem;
 	transition: var(--transition);
 	box-shadow: var(--shadow);
+	width: 100%;
+	justify-content: center;
 }
 
 .btn-primary:hover {
 	background-color: var(--secondary-color);
 	transform: translateY(-2px);
 	box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+	background-color: #8B5CF6;
+}
+
+.btn-secondary:hover {
+	background-color: #7C3AED;
 }
 
 /* Features section */
@@ -448,14 +529,12 @@ main {
 	color: var(--text-light);
 }
 
-/* ====================== */
-/* SEZIONE CORSI MODIFICATA */
-/* ====================== */
-
+/* Sezione corsi - Layout principale */
 .courses-container {
 	display: block;
 }
 
+/* Sezioni corsi triennali/magistrali */
 .courses-section {
 	margin-bottom: 60px;
 	background-color: #f8fafc;
@@ -464,6 +543,10 @@ main {
 
 [data-theme="dark"] .courses-section {
 	background-color: var(--bg-color);
+}
+
+.courses-section:last-child {
+	margin-bottom: 0;
 }
 
 .section-header {
@@ -498,7 +581,7 @@ main {
 	margin: 0 auto;
 }
 
-/* GRIGLIA CORSI - MODIFICATA PER AVERE CARD PIÙ LARGHE */
+/* GRIGLIA CORSI - MODIFICATA PER ALTEZZA UNIFORME */
 .courses-grid {
 	display: grid;
 	grid-template-columns: 1fr; /* Una sola colonna per default */
@@ -507,9 +590,10 @@ main {
 	max-width: 900px;
 	margin: 0 auto;
 	background-color: transparent;
+	align-items: stretch; /* Rende tutte le card della stessa altezza */
 }
 
-/* CARD DEI CORSI - MODIFICATE PER ESSERE RETTANGOLARI */
+/* CARD DEI CORSI - ALTEZZA FISSA E UNIFORME */
 .course-card {
 	background-color: var(--bg-color);
 	border: 2px solid var(--border-color);
@@ -519,7 +603,8 @@ main {
 	transition: var(--transition);
 	display: flex;
 	flex-direction: column;
-	min-height: 160px;
+	height: 210px; /* Altezza fissa invece di min-height - AUMENTATA */
+	justify-content: space-between; /* Distribuisce lo spazio uniformemente */
 }
 
 [data-theme="dark"] .course-card {
@@ -535,8 +620,9 @@ main {
 .course-header {
 	display: flex;
 	align-items: flex-start;
-	margin-bottom: 20px;
+	margin-bottom: 15px; /* Ridotto da 20px a 15px */
 	gap: 15px;
+	flex-shrink: 0; /* Impedisce al header di ridursi */
 }
 
 .course-code {
@@ -572,15 +658,22 @@ main {
 	font-size: 1.2rem;
 	font-weight: 600;
 	color: var(--text-color);
-	line-height: 1.4;
+	line-height: 1.3; /* Ridotto da 1.4 a 1.3 */
 	flex: 1;
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* Limita a massimo 2 righe */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	min-height: calc(1.2rem * 1.3 * 2); /* Assicura spazio per due righe anche se ce n'è una */
 }
 
 .course-links {
 	display: flex;
 	gap: 15px;
-	margin-top: auto;
-	padding-top: 20px;
+	margin-top: auto; /* Spinge i link sempre in basso */
+	padding-top: 15px; /* Ridotto da 20px a 15px */
+	flex-shrink: 0; /* Impedisce ai link di ridursi */
 }
 
 /* Layout per link magistrali (solo WhatsApp) */
@@ -611,6 +704,7 @@ main {
 	transition: var(--transition);
 	border: 2px solid transparent;
 	min-width: 150px;
+	font-size: 0.9rem; /* Leggermente ridotto per risparmiare spazio */
 }
 
 .whatsapp-link {
@@ -632,6 +726,7 @@ main {
 	background-color: #3367d6;
 	transform: translateY(-2px);
 }
+
 
 /* Modal Styles */
 .modal {
@@ -913,7 +1008,7 @@ footer {
 	100% { transform: scale(1); }
 }
 
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE DESIGN - AGGIORNATO PER ALTEZZE UNIFORMI */
 
 /* Schermo grande e medio */
 @media (min-width: 768px) {
@@ -929,40 +1024,91 @@ footer {
 	}
 }
 
+@media (max-width: 1024px) {
+	/* Questa media query era nel blocco originale ma non aveva una regola per .courses-grid */
+	/* Se si vuole mantenere la logica precedente: */
+	.courses-grid {
+		grid-template-columns: repeat(2, 1fr); /* Ripristina la regola dal blocco CSS precedente per questo breakpoint */
+	}
+}
+
+
 @media (max-width: 768px) {
+	.whatsapp-groups {
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+	}
+	
+	.group-card {
+		max-width: 100%;
+		padding: 25px 20px;
+	}
+	
+	.group-icon {
+		font-size: 2.5rem;
+	}
+	
+	.group-card h4 {
+		font-size: 1.3rem;
+	}
+	
+	.universities-list {
+		text-align: center;
+		width: 100%;
+	}
+	
+	.universities-list li {
+		justify-content: center;
+	}
+
 	.courses-section {
 		margin-bottom: 40px;
 		padding: 20px 0 30px;
 	}
-	
+
 	.section-header {
 		padding: 15px;
 		margin-bottom: 25px;
 	}
-	
+
 	.section-header h2 {
 		font-size: 1.8rem;
 		flex-direction: column;
 		gap: 10px;
 	}
-	
+
 	.section-header p {
 		font-size: 1rem;
 	}
-	
+
+	.course-card {
+		height: 230px; /* Leggermente più alta su mobile - AUMENTATA */
+	}
+
 	.course-links.one-link .course-link {
 		min-width: 200px;
 		max-width: 100%;
 	}
 
+	.course-links {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.course-link {
+		font-size: 0.9rem;
+	}
+
+	/* Altre regole responsive dal blocco CSS precedente */
 	.container {
 		padding: 0 15px;
 	}
-	
+
 	.nav-container {
 		padding: 0 15px;
 	}
-	
+
 	.nav-menu {
 		position: fixed;
 		left: -100%;
@@ -1002,7 +1148,7 @@ footer {
 	.hero {
 		padding: 60px 0;
 	}
-	
+
 	.hero h1 {
 		font-size: 2.2rem;
 	}
@@ -1010,31 +1156,27 @@ footer {
 	.hero-subtitle {
 		font-size: 1.15rem;
 	}
-	
+
 	.hero-description {
 		padding: 25px 20px;
 		margin: 30px 0;
 	}
-	
+
 	.features {
 		padding: 60px 0;
 	}
-	
+
 	.features-grid {
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr; /* Sovrascrive la regola generale per .features-grid */
 		gap: 20px;
 	}
-	
+
 	.feature-card {
 		padding: 30px 20px;
 	}
 
 	.features h2 {
 		font-size: 2rem;
-	}
-
-	.course-links {
-		flex-direction: column;
 	}
 
 	.modal-content {
@@ -1046,35 +1188,77 @@ footer {
 	.clickable-card:hover {
 		transform: translateY(-6px) scale(1.01);
 	}
-	
+
 	.card-action {
 		padding: 10px 18px;
 		font-size: 0.85rem;
 	}
 
-	/* Footer responsive */
 	.footer-content {
 		flex-direction: column;
 		text-align: center;
 		gap: 25px;
 		padding: 0 15px;
 	}
-	
+
 	.social-icons {
 		flex-direction: column;
 		gap: 15px;
 		align-items: center;
 	}
-	
+
 	.social-link {
 		justify-content: center;
 		padding: 15px 25px;
 		max-width: 200px;
 	}
+	/* Fine altre regole responsive dal blocco CSS precedente */
 }
 
 /* Mobile piccolo */
 @media (max-width: 480px) {
+	.group-card {
+		padding: 20px 15px;
+	}
+	
+	.group-icon {
+		font-size: 2rem;
+		margin-bottom: 15px;
+	}
+	
+	.group-card h4 {
+		font-size: 1.2rem;
+		margin-bottom: 10px;
+	}
+	
+	.group-description {
+		font-size: 0.95rem;
+		margin-bottom: 10px;
+	}
+	
+	.universities-list {
+		margin-bottom: 20px;
+		font-size: 0.9rem;
+	}
+	
+	.universities-list li {
+		padding: 4px 0;
+	}
+
+	.course-card {
+		padding: 20px 15px;
+		height: 250px; /* Più alta per accomodare il layout mobile - AUMENTATA */
+	}
+
+	.course-links {
+		gap: 8px;
+	}
+
+	.course-link {
+		padding: 12px 15px;
+		font-size: 0.85rem;
+	}
+	/* Altre regole responsive dal blocco CSS precedente */
 	.container {
 		padding: 0 10px;
 	}
@@ -1082,21 +1266,21 @@ footer {
 	.hero {
 		padding: 50px 0;
 	}
-	
+
 	.hero h1 {
 		font-size: 1.8rem;
 		line-height: 1.2;
 	}
-	
+
 	.hero-subtitle {
 		font-size: 1rem;
 	}
-	
+
 	.hero-description {
 		padding: 20px 15px;
 		margin: 25px 0;
 	}
-	
+
 	.btn-primary {
 		padding: 12px 20px;
 		font-size: 1rem;
@@ -1107,43 +1291,30 @@ footer {
 	.features {
 		padding: 50px 0;
 	}
-	
+
 	.feature-card {
-		padding: 25px 15px;
+		padding: 25px 15px; /* Sovrascrive la regola generale per .feature-card */
 	}
 
 	.courses-header {
 		padding: 25px 0;
 	}
-	
+
 	.courses-header h1 {
 		font-size: 2rem;
 	}
-	
+
 	.search-box {
 		margin: 20px auto 0;
 	}
-	
+
 	.search-box input {
 		padding: 12px 40px 12px 15px;
 		font-size: 16px; /* Evita zoom su iOS */
 	}
-	
-	.course-card {
-		padding: 20px 15px;
-	}
-	
-	.course-links {
-		gap: 10px;
-	}
-	
-	.course-link {
-		padding: 15px;
-		font-size: 0.9rem;
-	}
-	
+
 	.modal-content {
-		margin: 5% auto;
+		margin: 5% auto; /* Sovrascrive la regola precedente per .modal-content */
 		padding: 20px 15px;
 		width: 95%;
 		max-height: 90vh;
@@ -1152,94 +1323,128 @@ footer {
 	footer {
 		padding: 25px 0 15px;
 	}
-	
+
 	.footer-content {
-		padding: 0 10px;
+		padding: 0 10px; /* Sovrascrive la regola precedente per .footer-content */
 	}
-	
+
 	.social-link {
-		padding: 12px 20px;
+		padding: 12px 20px; /* Sovrascrive la regola precedente per .social-link */
 		font-size: 0.9rem;
 	}
-	
+
 	.social-link i {
 		font-size: 1.1rem;
 	}
 
 	.section-header h2 {
-		font-size: 1.6rem;
+		font-size: 1.6rem; /* Sovrascrive la regola precedente per .section-header h2 */
 	}
-	
+
 	.course-code.magistrale::after {
 		right: -6px;
 		top: -3px;
 		font-size: 0.7rem;
 	}
+	/* Fine altre regole responsive dal blocco CSS precedente */
 }
 
 /* Mobile molto piccolo */
 @media (max-width: 320px) {
-	.hero h1 {
-		font-size: 1.6rem;
-	}
-	
-	.feature-card {
-		padding: 20px 10px;
-	}
-	
-	.course-card {
+	.group-card {
 		padding: 15px 10px;
 	}
 	
-	.social-link {
-		padding: 10px 15px;
-		font-size: 0.8rem;
+	.group-icon {
+		font-size: 1.8rem;
 	}
 	
+	.group-card h4 {
+		font-size: 1.1rem;
+	}
+	
+	.group-description {
+		font-size: 0.9rem;
+	}
+	
+	.universities-list {
+		font-size: 0.85rem;
+	}
+
+	.course-card {
+		padding: 15px 10px;
+		height: 270px; /* AUMENTATA */
+	}
+
 	.course-code {
 		padding: 6px 12px;
 		font-size: 0.85rem;
 	}
+
+	.course-name {
+		font-size: 1.1rem;
+		min-height: calc(1.1rem * 1.3 * 2); /* Aggiornato per il nuovo font-size */
+	}
+
+	.course-code.magistrale::after {
+		right: -6px;
+		top: -3px;
+		font-size: 0.7rem;
+	}
+	/* Altre regole responsive dal blocco CSS precedente */
+	.hero h1 {
+		font-size: 1.6rem;
+	}
+
+	.feature-card {
+		padding: 20px 10px; /* Sovrascrive la regola generale per .feature-card */
+	}
+
+	.social-link {
+		padding: 10px 15px; /* Sovrascrive la regola precedente per .social-link */
+		font-size: 0.8rem;
+	}
+	/* Fine altre regole responsive dal blocco CSS precedente */
 }
 
-/* Orientamento landscape su mobile */
+/* Orientamento landscape su mobile (dal blocco CSS precedente) */
 @media (max-width: 768px) and (orientation: landscape) {
 	.hero {
 		padding: 40px 0;
 	}
-	
+
 	.hero h1 {
 		font-size: 2rem;
 	}
-	
+
 	.nav-menu.active {
 		max-height: calc(100vh - 70px);
 	}
-	
+
 	.features {
 		padding: 50px 0;
 	}
 }
 
-/* Touch-friendly per dispositivi touch */
+/* Touch-friendly per dispositivi touch (dal blocco CSS precedente) */
 @media (hover: none) and (pointer: coarse) {
 	.feature-card:hover,
 	.course-card:hover,
 	.clickable-card:hover {
 		transform: none;
 	}
-	
+
 	.btn-primary,
 	.course-link,
 	.social-link {
 		min-height: 44px;
 	}
-	
+
 	.theme-toggle {
 		min-height: 44px;
 		min-width: 44px;
 	}
-	
+
 	.nav-link {
 		min-height: 44px;
 		display: flex;

@@ -1010,30 +1010,32 @@ footer {
 
 /* RESPONSIVE DESIGN - AGGIORNATO PER ALTEZZE UNIFORMI */
 
-/* Schermo grande e medio */
-@media (min-width: 768px) {
-	.courses-grid {
-		grid-template-columns: 1fr 1fr; /* 2 colonne su tablet */
-	}
-}
-
+/* Solo su desktop grande */
 @media (min-width: 1200px) {
 	.courses-grid {
-		grid-template-columns: 1fr 1fr 1fr; /* 3 colonne su desktop */
+		grid-template-columns: 1fr 1fr 1fr; /* 3 colonne su desktop grande */
 		max-width: 1200px;
 	}
 }
 
-@media (max-width: 1024px) {
-	/* Questa media query era nel blocco originale ma non aveva una regola per .courses-grid */
-	/* Se si vuole mantenere la logica precedente: */
+/* Tablet landscape e desktop medio */
+@media (min-width: 769px) and (max-width: 1199px) {
 	.courses-grid {
-		grid-template-columns: repeat(2, 1fr); /* Ripristina la regola dal blocco CSS precedente per questo breakpoint */
+		grid-template-columns: 1fr 1fr; /* 2 colonne su tablet landscape e desktop medio */
+		max-width: 900px;
 	}
 }
 
 
 @media (max-width: 768px) {
+	/* GRIGLIA CORSI - FORZATA A UNA COLONNA SU MOBILE */
+	.courses-grid {
+		grid-template-columns: 1fr !important; /* Una sola colonna su mobile */
+		max-width: 500px; /* Larghezza massima come la search box */
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+
 	.whatsapp-groups {
 		flex-direction: column;
 		align-items: center;
@@ -1083,7 +1085,20 @@ footer {
 	}
 
 	.course-card {
-		height: 230px; /* Leggermente più alta su mobile - AUMENTATA */
+		height: auto; /* Altezza automatica su mobile per migliore flessibilità */
+		min-height: 200px;
+		width: 100%;
+	}
+
+	.course-header {
+		flex-direction: row; /* Mantiene codice e nome sulla stessa riga */
+		flex-wrap: wrap; /* Permette al nome di andare a capo se necessario */
+	}
+
+	.course-name {
+		font-size: 1.1rem;
+		-webkit-line-clamp: 3; /* Permette 3 righe su mobile */
+		min-height: auto;
 	}
 
 	.course-links.one-link .course-link {
@@ -1092,12 +1107,15 @@ footer {
 	}
 
 	.course-links {
-		flex-direction: column;
+		flex-direction: row; /* Mantiene i pulsanti affiancati */
 		gap: 10px;
+		flex-wrap: wrap; /* Permette di andare a capo se necessario */
 	}
 
 	.course-link {
 		font-size: 0.9rem;
+		flex: 1;
+		min-width: 140px; /* Larghezza minima ridotta per stare affiancati */
 	}
 
 	/* Altre regole responsive dal blocco CSS precedente */

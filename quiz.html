@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<!-- FAVICON E METADATA -->
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+	<link rel="shortcut icon" href="favicon.png">
+	
+	<!-- Meta per SEO e social -->
+	<meta name="description" content="Quiz di orientamento universitario - Scopri quale area di studio è più adatta a te">
+	<meta name="keywords" content="quiz orientamento, università, test attitudine, scelta corso laurea">
+	<meta name="author" content="Il Gruppo dello Studente">
+	
+	<!-- Open Graph per social media -->
+	<meta property="og:title" content="Quiz Orientamento - Il Gruppo dello Studente">
+	<meta property="og:description" content="Scopri quale percorso universitario fa per te con il nostro quiz di orientamento">
+	<meta property="og:type" content="website">
+	
+	<title>Quiz di Orientamento Universitario - Il Gruppo dello Studente</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<div class="nav-container">
+				<div class="nav-logo">
+					<i class="fas fa-graduation-cap"></i>
+					<span>@laura_inprogress</span>
+				</div>
+				<ul class="nav-menu">
+					<li><a href="index.html" class="nav-link">Home</a></li>
+					<li><a href="corsi.html" class="nav-link">Corsi di Studio</a></li>
+					<li><a href="quiz.html" class="nav-link active">
+						<i class="fas fa-compass"></i>
+						<span>Quiz Orientamento</span>
+					</a></li>
+					<li><button id="theme-toggle" class="theme-toggle">
+						<i class="fas fa-moon"></i>
+					</button></li>
+				</ul>
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<div class="quiz-container">
+			<!-- Intro del Quiz -->
+			<div id="quiz-intro" class="quiz-intro">
+				<div class="quiz-header">
+					<h1><i class="fas fa-compass"></i> Quiz di Orientamento Universitario</h1>
+					<p>Scopri quale area di studio è più adatta alle tue passioni e attitudini!</p>
+				</div>
+				
+				<div class="quiz-card">
+					<div class="quiz-info">
+						<h2>Come funziona il quiz?</h2>
+						<ul class="quiz-info-list">
+							<li><i class="fas fa-question-circle"></i> <strong>15 domande</strong> studiate per capire le tue inclinazioni</li>
+							<li><i class="fas fa-clock"></i> <strong>5-10 minuti</strong> per completarlo</li>
+							<li><i class="fas fa-chart-pie"></i> <strong>5 aree di studio</strong> per scoprire quella più adatta a te </li>
+							<li><i class="fas fa-list"></i> <strong>Corsi consigliati</strong> in base al tuo profilo</li>
+						</ul>
+						
+						<div class="quiz-areas">
+							<h3>Le aree che esploreremo:</h3>
+							<div class="areas-grid">
+								<div class="area-preview">
+									<i class="fas fa-atom"></i>
+									<span>Tecnico-Scientifica</span>
+								</div>
+								<div class="area-preview">
+									<i class="fas fa-balance-scale"></i>
+									<span>Economico-Giuridica</span>
+								</div>
+								<div class="area-preview">
+									<i class="fas fa-book"></i>
+									<span>Umanistica</span>
+								</div>
+								<div class="area-preview">
+									<i class="fas fa-palette"></i>
+									<span>Comunicazione e Design</span>
+								</div>
+								<div class="area-preview">
+									<i class="fas fa-heartbeat"></i>
+									<span>Scienze della Vita</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<button class="quiz-btn quiz-btn-start" onclick="startQuiz()">
+						<i class="fas fa-play"></i>
+						Inizia il Quiz
+					</button>
+				</div>
+			</div>
+
+			<!-- Quiz Content -->
+			<div id="quiz-content" style="display: none;">
+				<div class="quiz-progress">
+					<div class="quiz-progress-bar" id="progress-bar">
+						<span class="quiz-progress-text" id="progress-text">1/15</span>
+					</div>
+				</div>
+				
+				<div class="quiz-card">
+					<div class="question-number" id="question-number">Domanda 1 di 15</div>
+					<h2 class="question-text" id="question-text"></h2>
+					
+					<div class="quiz-options" id="quiz-options"></div>
+					
+					<div class="quiz-navigation">
+						<button class="quiz-btn quiz-btn-back" id="btn-back" onclick="previousQuestion()" disabled>
+							<i class="fas fa-arrow-left"></i>
+							Indietro
+						</button>
+						<button class="quiz-btn quiz-btn-next" id="btn-next" onclick="nextQuestion()" disabled>
+							Avanti
+							<i class="fas fa-arrow-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Quiz Results -->
+			<div id="quiz-results" style="display: none;">
+				<div class="quiz-card quiz-results">
+					<div class="results-icon" id="results-icon">
+						<i class="fas fa-trophy"></i>
+					</div>
+					
+					<h2 class="results-title">Il tuo profilo è stato determinato!</h2>
+					
+					<div class="results-area" id="results-area">
+						<h3 id="area-title"></h3>
+						<p class="results-description" id="area-description"></p>
+						
+						<div class="recommended-courses">
+							<h4>Corsi di laurea consigliati per te:</h4>
+							<ul id="recommended-courses-list"></ul>
+						</div>
+					</div>
+					
+					<div id="secondary-area" class="results-area" style="display: none; margin-top: 20px; opacity: 0.8;">
+						<h3 id="secondary-area-title"></h3>
+						<p class="results-description" id="secondary-area-description"></p>
+						<div class="recommended-courses">
+							<h4>Altri corsi che potrebbero interessarti:</h4>
+							<ul id="secondary-courses-list"></ul>
+						</div>
+					</div>
+					
+					<div class="quiz-restart">
+						<button class="quiz-restart-btn" onclick="restartQuiz()">
+							<i class="fas fa-redo"></i>
+							Rifai il Quiz
+						</button>
+					</div>
+					
+					<div style="margin-top: 30px;">
+						<a href="corsi.html" class="quiz-btn quiz-btn-next" style="text-decoration: none; display: inline-flex;">
+							Vai ai Corsi di Studio
+							<i class="fas fa-graduation-cap"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-main">
+					<p>Creato da 
+						<a href="https://github.com/Gabro23" 
+						   target="_blank" 
+						   rel="noopener noreferrer"
+						   class="github-link"
+						   title="Profilo GitHub">
+							<i class="fab fa-github"></i>
+							Gabriele Minissale
+						</a> 
+						per la comunità studentesca
+					</p>
+				</div>
+				
+				<div class="social-links">
+					<h4>Seguimi sui social</h4>
+					<div class="social-icons">
+						<a href="https://www.tiktok.com/@laura_inprogress?_t=ZN-8xJ8P3zfkrX&_r=1" 
+						   target="_blank" 
+						   rel="noopener noreferrer"
+						   class="social-link tiktok"
+						   title="Seguici su TikTok">
+							<i class="fab fa-tiktok"></i>
+							<span>TikTok</span>
+						</a>
+						
+						<a href="https://www.instagram.com/lalli_inprogress?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+						   target="_blank" 
+						   rel="noopener noreferrer"
+						   class="social-link instagram"
+						   title="Seguici su Instagram">
+							<i class="fab fa-instagram"></i>
+							<span>Instagram</span>
+						</a>
+					</div>
+					
+					<p class="social-desc">Per consigli di studio e motivazione!</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
+	<script src="quiz.js"></script>
+</body>
+</html>

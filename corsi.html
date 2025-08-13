@@ -68,11 +68,15 @@
 			<div class="nav-container">
 				<div class="nav-logo">
 					<i class="fas fa-graduation-cap"></i>
-					<span>Il Gruppo dello Studente</span>
+					<span>@laura_inprogress</span>
 				</div>
 				<ul class="nav-menu">
 					<li><a href="index.html" class="nav-link">Home</a></li>
 					<li><a href="corsi.html" class="nav-link active">Corsi di Studio</a></li>
+					<li><a href="quiz.html" class="nav-link">
+						<i class="fas fa-compass"></i>
+						<span>Quiz Orientamento</span>
+					</a></li>
 					<li><button id="theme-toggle" class="theme-toggle">
 						<i class="fas fa-moon"></i>
 					</button></li>
@@ -90,36 +94,60 @@
 			<div class="container">
 				<h1>Corsi di Studio</h1>
 				<p>Trova il gruppo WhatsApp e le risorse per il tuo corso di laurea</p>
+				
+				<!-- BANNER QUIZ AGGIUNTO -->
+				<div class="quiz-banner quiz-banner-compact">
+					<div class="quiz-banner-content">
+						<div class="quiz-banner-icon">
+							<i class="fas fa-compass"></i>
+						</div>
+						<div class="quiz-banner-text">
+							<h3>Non sai quale corso scegliere?</h3>
+							<p>Fai il nostro quiz di orientamento per scoprire l'area di studio più adatta a te!</p>
+						</div>
+						<a href="quiz.html" class="btn-quiz">
+							<i class="fas fa-play-circle"></i>
+							Fai il Quiz
+						</a>
+					</div>
+				</div>
+				
 				<div class="search-box">
 					<input type="text" id="courseSearch" placeholder="Cerca il tuo corso (es. L-10, Informatica, Economia...)">
 					<i class="fas fa-search"></i>
 				</div>
 			</div>
 		</section>
-		<section class="courses-grid">
+
+		<!-- 
+			LA MODIFICA È QUI: Ho rimosso la classe "courses-grid" dal tag <section> 
+			per evitare conflitti con le griglie generate dal JavaScript.
+		-->
+		<section>
 			<div class="container">
 				<div id="coursesContainer" class="courses-container">
 					<!-- I corsi verranno generati dinamicamente -->
 				</div>
 			</div>
 		</section>
+
 	</main>
 	<footer>
-	<div class="container">
-	<div class="footer-content">
-		<div class="footer-main">
-			<p>Creato da 
-				<a href="https://github.com/Gabro23" 
-				   target="_blank" 
-				   rel="noopener noreferrer"
-				   class="github-link"
-				   title="Profilo GitHub">
-					<i class="fab fa-github"></i>
-					Gabriele Minissale
-				</a> 
-				per la comunità studentesca
-			</p>
-		</div>
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-main">
+					<p>Creato da 
+						<a href="https://github.com/Gabro23" 
+						   target="_blank" 
+						   rel="noopener noreferrer"
+						   class="github-link"
+						   title="Profilo GitHub">
+							<i class="fab fa-github"></i>
+							Gabriele Minissale
+						</a> 
+						per la comunità studentesca
+					</p>
+				</div>
 				
 				<div class="social-links">
 					<h4>Seguimi sui social</h4>

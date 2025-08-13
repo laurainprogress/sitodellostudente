@@ -49,6 +49,12 @@ const corsiTriennali = [
 		drive: 'https://drive.google.com/drive/folders/13ce8eXABCSDLt_WWM6B776SDU1gNbGqg?usp=drive_link'
 	},
 	{ 
+		codice: 'L-13', 
+		nome: 'Scienze Biologiche',
+		whatsapp: 'https://chat.whatsapp.com/EeDG7x5BzOf011HyIU8osJ',
+		drive: 'https://drive.google.com/drive/folders/1o22FuW0EeVuI22_itYzfKy2-7VtFVCog?usp=drive_link'
+	},
+	{ 
 		codice: 'L-14', 
 		nome: 'Scienze Giuridiche',
 		whatsapp: 'https://chat.whatsapp.com/Exg7OZddELl0YeFMrRzd2Q',

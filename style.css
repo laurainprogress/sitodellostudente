@@ -79,7 +79,263 @@ body {
 .nav-logo {
 	display: flex;
 	align-items: center;
+	font-size: 1.4rem;
+}
+
+.areas-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 15px;
+}
+
+.area-preview {
+	background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+	border: 2px solid var(--border-color);
+	border-radius: 12px;
+	padding: 15px;
+	text-align: center;
+	transition: all 0.3s ease;
+}
+
+.area-preview:hover {
+	transform: translateY(-5px);
+	border-color: var(--primary-color);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.area-preview i {
+	font-size: 2rem;
+	margin-bottom: 10px;
+	display: block;
+	background: linear-gradient(135deg, #667eea, #764ba2);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.area-preview span {
+	font-size: 0.9rem;
+	color: var(--text-color);
+	font-weight: 500;
+}
+
+/* Pulsante Start Quiz */
+.quiz-btn-start {
+	background: linear-gradient(135deg, #667eea, #764ba2);
+	color: white;
+	padding: 18px 50px;
+	border: none;
+	border-radius: 50px;
+	font-size: 1.3rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	margin: 30px auto 0;
+	display: flex;
+	justify-content: center;
+	box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+}
+
+.quiz-btn-start:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+}
+
+.quiz-btn-start i {
+	font-size: 1.4rem;
+}
+
+/* Dark mode per intro quiz */
+[data-theme="dark"] .quiz-areas {
+	background: var(--card-bg);
+}
+
+[data-theme="dark"] .area-preview {
+	background: linear-gradient(135deg, rgba(76, 95, 213, 0.1), rgba(195, 42, 255, 0.1));
+}
+
+[data-theme="dark"] .area-preview:hover {
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive per intro quiz */
+@media (max-width: 768px) {
+	.quiz-info h2 {
+		font-size: 1.5rem;
+	}
+	
+	.quiz-info-list li {
+		font-size: 1rem;
+		padding: 10px 0;
+	}
+	
+	.quiz-areas {
+		padding: 20px 15px;
+	}
+	
+	.areas-grid {
+		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+		gap: 12px;
+	}
+	
+	.area-preview {
+		padding: 12px 8px;
+	}
+	
+	.area-preview i {
+		font-size: 1.6rem;
+		margin-bottom: 8px;
+	}
+	
+	.area-preview span {
+		font-size: 0.8rem;
+	}
+	
+	.quiz-btn-start {
+		padding: 15px 40px;
+		font-size: 1.2rem;
+		width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	.quiz-info-list li {
+		font-size: 0.95rem;
+		gap: 10px;
+	}
+	
+	.quiz-info-list li i {
+		font-size: 1.1rem;
+	}
+	
+	.quiz-areas h3 {
+		font-size: 1.2rem;
+	}
+	
+	.areas-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+	
+	.area-preview {
+		padding: 10px 5px;
+	}
+	
+	.area-preview i {
+		font-size: 1.4rem;
+	}
+	
+	.area-preview span {
+		font-size: 0.75rem;
+	}
+}
+
+/* Animazioni per le aree preview */
+@keyframes slideInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.area-preview {
+	animation: slideInUp 0.6s ease backwards;
+}
+
+.area-preview:nth-child(1) { animation-delay: 0.1s; }
+.area-preview:nth-child(2) { animation-delay: 0.2s; }
+.area-preview:nth-child(3) { animation-delay: 0.3s; }
+.area-preview:nth-child(4) { animation-delay: 0.4s; }
+.area-preview:nth-child(5) { animation-delay: 0.5s; }
+
+/* ========================================
+   STILI PER QUIZ BANNER COMPATTO (PAGINA CORSI)
+   ======================================== */
+
+/* Quiz Banner Compatto per pagina Corsi */
+.quiz-banner-compact {
+	margin: 30px auto;
+	max-width: 900px;
+	padding: 25px;
+}
+
+.quiz-banner-compact .quiz-banner-content {
+	gap: 20px;
+}
+
+.quiz-banner-compact .quiz-banner-icon {
+	font-size: 2.5rem;
+}
+
+.quiz-banner-compact .quiz-banner-text h3 {
 	font-size: 1.5rem;
+	margin-bottom: 8px;
+}
+
+.quiz-banner-compact .quiz-banner-text p {
+	font-size: 1rem;
+}
+
+.quiz-banner-compact .btn-quiz {
+	padding: 12px 30px;
+	font-size: 1rem;
+}
+
+/* Responsive per banner compatto */
+@media (max-width: 768px) {
+	.quiz-banner-compact {
+		padding: 20px;
+		margin: 20px auto;
+	}
+	
+	.quiz-banner-compact .quiz-banner-content {
+		flex-direction: column;
+		text-align: center;
+		gap: 15px;
+	}
+	
+	.quiz-banner-compact .quiz-banner-icon {
+		font-size: 2rem;
+	}
+	
+	.quiz-banner-compact .quiz-banner-text h3 {
+		font-size: 1.3rem;
+	}
+	
+	.quiz-banner-compact .quiz-banner-text p {
+		font-size: 0.95rem;
+	}
+	
+	.quiz-banner-compact .btn-quiz {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.quiz-banner-compact {
+		padding: 18px 15px;
+	}
+	
+	.quiz-banner-compact .quiz-banner-text h3 {
+		font-size: 1.2rem;
+	}
+	
+	.quiz-banner-compact .quiz-banner-text p {
+		font-size: 0.9rem;
+	}
+	
+	.quiz-banner-compact .btn-quiz {
+		padding: 10px 25px;
+		font-size: 0.95rem;
+	}
+
 	font-weight: bold;
 	color: var(--primary-color);
 }
@@ -159,10 +415,49 @@ main {
 	min-height: calc(100vh - 140px);
 }
 
-/* Hero section */
+/* Hero section CON IMMAGINE DI SFONDO */
 .hero {
 	padding: 80px 0;
-	background: linear-gradient(135deg, var(--bg-color) 0%, var(--card-bg) 100%);
+	position: relative;
+	/* IMPORTANTE: Cambia 'hero-bg.jpg' con il nome del tuo file immagine */
+	background-image: url('hero-bg.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+/* Overlay scuro sopra l'immagine */
+.hero::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(
+		135deg,
+		rgba(0, 0, 0, 0.85) 0%,
+		rgba(20, 0, 40, 0.75) 50%,
+		rgba(102, 126, 234, 0.15) 100%
+	);
+	z-index: 1;
+}
+
+/* Assicura che il contenuto stia sopra l'overlay */
+.hero .container {
+	position: relative;
+	z-index: 2;
+}
+
+/* Dark mode per hero con immagine */
+[data-theme="dark"] .hero::before {
+	background: linear-gradient(
+		135deg,
+		rgba(0, 0, 0, 0.92) 0%,
+		rgba(20, 0, 40, 0.85) 50%,
+		rgba(76, 95, 213, 0.2) 100%
+	);
 }
 
 .hero-content {
@@ -485,24 +780,78 @@ main {
 	100% { transform: scale(1); opacity: 0.1; }
 }
 
-/* Courses page styles */
+/* Courses page styles CON IMMAGINE DI SFONDO */
 .courses-header {
-	padding: 40px 0;
-	background-color: var(--card-bg);
+	padding: 80px 0;
+	position: relative;
 	text-align: center;
 	border-bottom: 2px solid var(--border-color);
+	/* IMPORTANTE: Cambia 'libri-studio.jpg' con il nome del tuo file immagine */
+	background-image: url('appunti.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+/* Overlay scuro per la sezione corsi - PIÙ SCURO PER MIGLIORE LEGGIBILITÀ */
+.courses-header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(
+		135deg,
+		rgba(0, 0, 0, 0.92) 0%,
+		rgba(20, 0, 40, 0.88) 40%,
+		rgba(37, 211, 102, 0.05) 100%
+	);
+	z-index: 1;
+}
+
+/* Assicura che il contenuto stia sopra l'overlay */
+.courses-header > * {
+	position: relative;
+	z-index: 2;
+}
+
+/* Dark mode per courses header */
+[data-theme="dark"] .courses-header::before {
+	background: linear-gradient(
+		135deg,
+		rgba(0, 0, 0, 0.95) 0%,
+		rgba(20, 0, 40, 0.92) 40%,
+		rgba(76, 95, 213, 0.1) 100%
+	);
 }
 
 .courses-header h1 {
-	font-size: 2.5rem;
-	color: var(--accent-color);
-	margin-bottom: 15px;
+	font-size: 3rem;
+	color: #4ECDC4;
+	margin-bottom: 20px;
+	position: relative;
+	z-index: 2;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+	font-weight: bold;
+}
+
+.courses-header p {
+	color: #e9ecef;
+	font-size: 1.2rem;
+	position: relative;
+	z-index: 2;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+	max-width: 600px;
+	margin: 0 auto;
 }
 
 .search-box {
 	position: relative;
 	max-width: 500px;
 	margin: 30px auto 0;
+	z-index: 2;
 }
 
 .search-box input {
@@ -962,10 +1311,6 @@ footer {
 	transition: color 0.3s ease;
 }
 
-.github-link:hover {
-	color: #0366d6;
-}
-
 .github-link i {
 	font-size: 16px;
 }
@@ -1163,8 +1508,49 @@ footer {
 		transform: translateY(-9px) rotate(-45deg);
 	}
 
+	/* Hero con immagine - ottimizzato per mobile */
 	.hero {
 		padding: 60px 0;
+		background-attachment: scroll; /* Disabilita parallax su mobile */
+		background-position: center top;
+	}
+	
+	/* Overlay più scuro su mobile per migliore leggibilità */
+	.hero::before {
+		background: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.88) 0%,
+			rgba(20, 0, 40, 0.82) 100%
+		);
+	}
+
+	/* Courses header con immagine - ottimizzato per mobile */
+	.courses-header {
+		padding: 40px 0;
+		background-attachment: scroll;
+		background-position: center top;
+	}
+
+	.courses-header::before {
+		background: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.9) 0%,
+			rgba(20, 0, 40, 0.85) 100%
+		);
+	}
+
+	/* Quiz body con immagine - ottimizzato per mobile */
+	.quiz-body::before {
+		background-attachment: scroll;
+		background-position: center top;
+	}
+
+	.quiz-body::after {
+		background: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.9) 0%,
+			rgba(20, 0, 40, 0.85) 100%
+		);
 	}
 
 	.hero h1 {
@@ -1480,14 +1866,17 @@ footer {
 	margin-right: 5px;
 }
 
-/* Quiz Banner nella Home */
+/* Quiz Banner nella Home e Corsi */
 .quiz-banner {
 	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 	border-radius: 15px;
 	padding: 30px;
-	margin: 30px 0;
+	margin: 30px auto;  /* Aggiunto auto per centrare */
+	max-width: 900px;   /* Aggiungi larghezza massima */
 	box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
 	animation: float 6s ease-in-out infinite;
+	position: relative;
+	z-index: 2;  /* Assicura che stia sopra l'immagine di sfondo */
 }
 
 @keyframes float {
@@ -1566,13 +1955,61 @@ footer {
 }
 
 /* ========================================
-   STILI PER LA PAGINA QUIZ
+   STILI PER LA PAGINA QUIZ CON IMMAGINE DI SFONDO
    ======================================== */
+
+/* Background per la pagina quiz */
+.quiz-body {
+	position: relative;
+}
+
+.quiz-body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url('quiz.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	z-index: -2;
+}
+
+.quiz-body::after {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(
+		135deg,
+		rgba(0, 0, 0, 0.85) 0%,
+		rgba(20, 0, 40, 0.75) 50%,
+		rgba(102, 126, 234, 0.15) 100%
+	);
+	z-index: -1;
+}
+
+/* Dark mode per quiz background */
+[data-theme="dark"] .quiz-body::after {
+	background: linear-gradient(
+		135deg,
+		rgba(0, 0, 0, 0.92) 0%,
+		rgba(20, 0, 40, 0.88) 50%,
+		rgba(76, 95, 213, 0.2) 100%
+	);
+}
 
 .quiz-container {
 	max-width: 800px;
 	margin: 100px auto 50px;
 	padding: 0 20px;
+	position: relative;
+	z-index: 1;
 }
 
 .quiz-header {
@@ -1922,7 +2359,6 @@ footer {
 
 /* ========================================
    STILI AGGIUNTIVI PER L'INTRO DEL QUIZ
-   Da aggiungere al file style.css esistente
    ======================================== */
 
 /* Intro del Quiz */
@@ -1982,261 +2418,4 @@ footer {
 	color: var(--accent-color);
 	margin-bottom: 20px;
 	text-align: center;
-	font-size: 1.4rem;
-}
-
-.areas-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-	gap: 15px;
-}
-
-.area-preview {
-	background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-	border: 2px solid var(--border-color);
-	border-radius: 12px;
-	padding: 15px;
-	text-align: center;
-	transition: all 0.3s ease;
-}
-
-.area-preview:hover {
-	transform: translateY(-5px);
-	border-color: var(--primary-color);
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.area-preview i {
-	font-size: 2rem;
-	margin-bottom: 10px;
-	display: block;
-	background: linear-gradient(135deg, #667eea, #764ba2);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-}
-
-.area-preview span {
-	font-size: 0.9rem;
-	color: var(--text-color);
-	font-weight: 500;
-}
-
-/* Pulsante Start Quiz */
-.quiz-btn-start {
-	background: linear-gradient(135deg, #667eea, #764ba2);
-	color: white;
-	padding: 18px 50px;
-	border: none;
-	border-radius: 50px;
-	font-size: 1.3rem;
-	font-weight: bold;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	display: inline-flex;
-	align-items: center;
-	gap: 12px;
-	margin: 30px auto 0;
-	display: flex;
-	justify-content: center;
-	box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
-}
-
-.quiz-btn-start:hover {
-	transform: translateY(-3px);
-	box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
-}
-
-.quiz-btn-start i {
-	font-size: 1.4rem;
-}
-
-/* Dark mode per intro quiz */
-[data-theme="dark"] .quiz-areas {
-	background: var(--card-bg);
-}
-
-[data-theme="dark"] .area-preview {
-	background: linear-gradient(135deg, rgba(76, 95, 213, 0.1), rgba(195, 42, 255, 0.1));
-}
-
-[data-theme="dark"] .area-preview:hover {
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Responsive per intro quiz */
-@media (max-width: 768px) {
-	.quiz-info h2 {
-		font-size: 1.5rem;
-	}
-	
-	.quiz-info-list li {
-		font-size: 1rem;
-		padding: 10px 0;
-	}
-	
-	.quiz-areas {
-		padding: 20px 15px;
-	}
-	
-	.areas-grid {
-		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-		gap: 12px;
-	}
-	
-	.area-preview {
-		padding: 12px 8px;
-	}
-	
-	.area-preview i {
-		font-size: 1.6rem;
-		margin-bottom: 8px;
-	}
-	
-	.area-preview span {
-		font-size: 0.8rem;
-	}
-	
-	.quiz-btn-start {
-		padding: 15px 40px;
-		font-size: 1.2rem;
-		width: 100%;
-	}
-}
-
-@media (max-width: 480px) {
-	.quiz-info-list li {
-		font-size: 0.95rem;
-		gap: 10px;
-	}
-	
-	.quiz-info-list li i {
-		font-size: 1.1rem;
-	}
-	
-	.quiz-areas h3 {
-		font-size: 1.2rem;
-	}
-	
-	.areas-grid {
-		grid-template-columns: 1fr 1fr;
-	}
-	
-	.area-preview {
-		padding: 10px 5px;
-	}
-	
-	.area-preview i {
-		font-size: 1.4rem;
-	}
-	
-	.area-preview span {
-		font-size: 0.75rem;
-	}
-}
-
-/* Animazioni per le aree preview */
-@keyframes slideInUp {
-	from {
-		opacity: 0;
-		transform: translateY(30px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-.area-preview {
-	animation: slideInUp 0.6s ease backwards;
-}
-
-.area-preview:nth-child(1) { animation-delay: 0.1s; }
-.area-preview:nth-child(2) { animation-delay: 0.2s; }
-.area-preview:nth-child(3) { animation-delay: 0.3s; }
-.area-preview:nth-child(4) { animation-delay: 0.4s; }
-.area-preview:nth-child(5) { animation-delay: 0.5s; }
-
-/* ========================================
-   STILI PER QUIZ BANNER COMPATTO (PAGINA CORSI)
-   Da aggiungere al file style.css
-   ======================================== */
-
-/* Quiz Banner Compatto per pagina Corsi */
-.quiz-banner-compact {
-	margin: 30px auto;
-	max-width: 900px;
-	padding: 25px;
-}
-
-.quiz-banner-compact .quiz-banner-content {
-	gap: 20px;
-}
-
-.quiz-banner-compact .quiz-banner-icon {
-	font-size: 2.5rem;
-}
-
-.quiz-banner-compact .quiz-banner-text h3 {
-	font-size: 1.5rem;
-	margin-bottom: 8px;
-}
-
-.quiz-banner-compact .quiz-banner-text p {
-	font-size: 1rem;
-}
-
-.quiz-banner-compact .btn-quiz {
-	padding: 12px 30px;
-	font-size: 1rem;
-}
-
-/* Responsive per banner compatto */
-@media (max-width: 768px) {
-	.quiz-banner-compact {
-		padding: 20px;
-		margin: 20px auto;
-	}
-	
-	.quiz-banner-compact .quiz-banner-content {
-		flex-direction: column;
-		text-align: center;
-		gap: 15px;
-	}
-	
-	.quiz-banner-compact .quiz-banner-icon {
-		font-size: 2rem;
-	}
-	
-	.quiz-banner-compact .quiz-banner-text h3 {
-		font-size: 1.3rem;
-	}
-	
-	.quiz-banner-compact .quiz-banner-text p {
-		font-size: 0.95rem;
-	}
-	
-	.quiz-banner-compact .btn-quiz {
-		width: 100%;
-		justify-content: center;
-	}
-}
-
-@media (max-width: 480px) {
-	.quiz-banner-compact {
-		padding: 18px 15px;
-	}
-	
-	.quiz-banner-compact .quiz-banner-text h3 {
-		font-size: 1.2rem;
-	}
-	
-	.quiz-banner-compact .quiz-banner-text p {
-		font-size: 0.9rem;
-	}
-	
-	.quiz-banner-compact .btn-quiz {
-		padding: 10px 25px;
-		font-size: 0.95rem;
-	}
-}
+	font-size: 1.

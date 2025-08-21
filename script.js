@@ -222,7 +222,9 @@ class ThemeManager {
 	}
 
 	init() {
-		const savedTheme = localStorage.getItem('theme') || 'light';
+		// ==================== MODIFICA ESEGUITA QUI ====================
+		const savedTheme = localStorage.getItem('theme') || 'dark';
+		// ===============================================================
 		this.setTheme(savedTheme);
 
 		if (this.themeToggle) {

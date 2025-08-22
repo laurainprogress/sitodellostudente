@@ -76,7 +76,7 @@ const corsiTriennali = [
 		codice: 'L-18', 
 		nome: 'Economia Aziendale',
 		whatsapp: 'https://chat.whatsapp.com/K3XePfSWnRxGKMSeXUgD9n',
-		drive: 'https://drive.google.com/drive/folders/10veOI3n8x0Gb3TT5LZsgQf16rnGllDyA?usp=drive_link'
+		drive: 'https://drive.google.com/drive/folders/1Jc8MaUE6QvXrNT7ni8ZMPBHqWc2ylNYS?usp=drive_link'
 	},
 	{ 
 		codice: 'L-19', 

@@ -3059,6 +3059,270 @@ div.article-content a:hover {
 	background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
 }
 
+/* ========================================
+   BANNER ARTICOLO AI - NUOVO
+   ======================================== */
+.article-banner {
+	background: linear-gradient(135deg, #FF6B6B 0%, #FFE66D 100%);
+	border-radius: 15px;
+	padding: 25px;
+	margin: 30px auto 0;
+	max-width: 900px;
+	box-shadow: 0 10px 30px rgba(255, 107, 107, 0.2);
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+}
+
+.article-banner::before {
+	content: '';
+	position: absolute;
+	top: -50%;
+	right: -10%;
+	width: 300px;
+	height: 300px;
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+	border-radius: 50%;
+	pointer-events: none;
+}
+
+.article-banner::after {
+	content: '';
+	position: absolute;
+	bottom: -50%;
+	left: -10%;
+	width: 250px;
+	height: 250px;
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+	border-radius: 50%;
+	pointer-events: none;
+}
+
+.article-banner-content {
+	position: relative;
+	z-index: 1;
+}
+
+.article-banner-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	background: rgba(255, 255, 255, 0.95);
+	padding: 6px 16px;
+	border-radius: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-banner-badge i {
+	color: #FF6B6B;
+	font-size: 1rem;
+	animation: flame 1.5s ease-in-out infinite;
+}
+
+@keyframes flame {
+	0%, 100% { transform: scale(1) rotate(0deg); }
+	25% { transform: scale(1.1) rotate(-5deg); }
+	75% { transform: scale(1.1) rotate(5deg); }
+}
+
+.article-banner-badge span {
+	color: #333;
+	font-weight: 600;
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.article-banner-main {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 25px;
+	flex-wrap: wrap;
+}
+
+.article-banner-icon {
+	font-size: 3rem;
+	color: white;
+	opacity: 0.95;
+	filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+	animation: robot-hover 3s ease-in-out infinite;
+}
+
+@keyframes robot-hover {
+	0%, 100% { transform: translateY(0) rotate(0deg); }
+	50% { transform: translateY(-5px) rotate(5deg); }
+}
+
+.article-banner-text {
+	flex: 1;
+	text-align: left;
+}
+
+.article-banner-text h3 {
+	color: white;
+	font-size: 1.6rem;
+	margin-bottom: 8px;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article-banner-text p {
+	color: rgba(255, 255, 255, 0.95);
+	font-size: 1.05rem;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-article {
+	background: white;
+	color: #FF6B6B;
+	padding: 14px 32px;
+	text-decoration: none;
+	border-radius: 50px;
+	font-weight: bold;
+	font-size: 1.05rem;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	transition: all 0.3s ease;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	white-space: nowrap;
+}
+
+.btn-article:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+	background: #f8f9fa;
+}
+
+.btn-article i {
+	font-size: 1.2rem;
+}
+
+/* Dark theme support */
+[data-theme="dark"] .article-banner {
+	background: linear-gradient(135deg, #E63946 0%, #F77F00 100%);
+	box-shadow: 0 10px 30px rgba(230, 57, 70, 0.3);
+}
+
+[data-theme="dark"] .article-banner-badge {
+	background: rgba(45, 45, 45, 0.95);
+}
+
+[data-theme="dark"] .article-banner-badge span {
+	color: #e9ecef;
+}
+
+[data-theme="dark"] .article-banner-badge i {
+	color: #F77F00;
+}
+
+[data-theme="dark"] .btn-article {
+	background: var(--card-bg);
+	color: white;
+}
+
+[data-theme="dark"] .btn-article:hover {
+	background: var(--bg-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.article-banner {
+		padding: 20px;
+		margin: 20px auto 15px;
+	}
+	
+	.article-banner-badge {
+		margin-bottom: 15px;
+		font-size: 0.8rem;
+	}
+	
+	.article-banner-main {
+		flex-direction: column;
+		text-align: center;
+		gap: 15px;
+	}
+	
+	.article-banner-icon {
+		font-size: 2.5rem;
+	}
+	
+	.article-banner-text {
+		text-align: center;
+	}
+	
+	.article-banner-text h3 {
+		font-size: 1.3rem;
+		margin-bottom: 6px;
+	}
+	
+	.article-banner-text p {
+		font-size: 0.95rem;
+	}
+	
+	.btn-article {
+		width: 100%;
+		justify-content: center;
+		padding: 12px 28px;
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.article-banner {
+		padding: 18px 15px;
+	}
+	
+	.article-banner-badge {
+		padding: 5px 12px;
+	}
+	
+	.article-banner-badge i {
+		font-size: 0.9rem;
+	}
+	
+	.article-banner-badge span {
+		font-size: 0.75rem;
+	}
+	
+	.article-banner-icon {
+		font-size: 2rem;
+	}
+	
+	.article-banner-text h3 {
+		font-size: 1.15rem;
+	}
+	
+	.article-banner-text p {
+		font-size: 0.9rem;
+	}
+	
+	.btn-article {
+		padding: 10px 24px;
+		font-size: 0.95rem;
+	}
+	
+	.btn-article i {
+		font-size: 1.1rem;
+	}
+}
+
+@media (max-width: 320px) {
+	.article-banner-text h3 {
+		font-size: 1.05rem;
+	}
+	
+	.article-banner-text p {
+		font-size: 0.85rem;
+	}
+	
+	.btn-article {
+		padding: 9px 20px;
+		font-size: 0.9rem;
+	}
+}
+
 @media (max-width: 768px) {
 	.article-container {
 		padding: 0 15px;

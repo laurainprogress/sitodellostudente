@@ -180,7 +180,7 @@ const corsiMagistrali = [
 	},
 	{ 
 		codice: 'LM-56', 
-		nome: 'Economiam Digital Data Analysis, Amministrazioni Pubbliche',
+		nome: 'Economia, Digital Data Analysis, Amministrazioni Pubbliche',
 		whatsapp: 'https://chat.whatsapp.com/JsTcv3jgLJo1Vjecub9XNT'
 	},
 	{ 

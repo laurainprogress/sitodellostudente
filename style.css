@@ -293,7 +293,7 @@ main {
 	border: 2px solid var(--border-color);
 	border-radius: 15px;
 	padding: 30px;
-	max-width: 450px; /* MODIFICATO DA 350px A 450px */
+	max-width: 450px;
 	width: 100%;
 	box-shadow: var(--shadow);
 	transition: var(--transition);
@@ -3424,4 +3424,23 @@ div.article-content a:hover {
 		padding: 10px 20px;
 		font-size: 0.95rem;
 	}
+}
+
+/* ========================================
+   STILI PER LOGO EIPASS NEL BANNER (AGGIUNTI)
+   ======================================== */
+.article-banner-right {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px; /* Spazio tra logo e pulsante */
+}
+
+.eipass-logo {
+	max-width: 120px;
+	height: auto;
+	border-radius: 8px;
+	background-color: white; /* Sfondo bianco per visibilità */
+	padding: 5px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }

@@ -3,145 +3,145 @@ const corsiTriennali = [
 	{ 
 		codice: 'L-3', 
 		nome: 'Scienze e Tecnologie delle Arti, dello Spettacolo e del Cinema',
-		whatsapp: 'https://chat.whatsapp.com/GPTGIsJHlwU4WaJdIGOMTn',
+		whatsapp: 'https://chat.whatsapp.com/Lr1LjNBvXvl9ecUdY2V0VF',
 		drive: 'https://drive.google.com/drive/folders/1pw_BnKGaeTbU0iS5yEUw8QZPQHOWEtow?usp=drive_link'
 	},
 	{ 
 		codice: 'L-4', 
 		nome: 'Design del Prodotto e della Moda',
-		whatsapp: 'https://chat.whatsapp.com/GlS2ok9ZvpM6CF200lF4WI',
+		whatsapp: 'https://chat.whatsapp.com/KqAm1OJx6gu0NRdb32UbAI',
 		drive: 'https://drive.google.com/drive/folders/15T5EK8oTho2vS3y5pRN4fXETvackhz3s?usp=drive_link'
 	},
 	{ 
 		codice: 'L-5', 
 		nome: 'Filosofia ed Etica',
-		whatsapp: 'https://chat.whatsapp.com/LGaBdes7vWa3mwuhKX5cVF',
+		whatsapp: 'https://chat.whatsapp.com/GAWsP8hiMVDH03tVslrylO',
 		drive: 'https://drive.google.com/drive/folders/1MZ6NY1sqB27TG6CWzodVZIB2aAvhdU8j?usp=drive_link'
 	},
 	{ 
 		codice: 'L-7', 
 		nome: 'Ingegneria Civile',
-		whatsapp: 'https://chat.whatsapp.com/JwRAXZvYDYbLif76hYiSle',
+		whatsapp: 'https://chat.whatsapp.com/EwsAW7mZ4RY26imGepjr5m',
 		drive: 'https://drive.google.com/drive/folders/1XnTOZoivAH9S5NpZdpSjhCEBAgtr46Xe?usp=drive_link'
 	},
 	{ 
 		codice: 'L-8', 
 		nome: 'Ingegneria Informatica',
-		whatsapp: 'https://chat.whatsapp.com/Iiqg1TJBoJj98KtGNhTk0e',
+		whatsapp: 'https://chat.whatsapp.com/KnY3LG4uTdtC4O6lKomLiz',
 		drive: 'https://drive.google.com/drive/folders/1nWOYosUraDBffInsN6hrmE2Vwq3_CyjD?usp=drive_link'
 	},
 	{ 
 		codice: 'L-9', 
 		nome: 'Ingegneria Gestionale',
-		whatsapp: 'https://chat.whatsapp.com/GxQHvyJ5c6HFhZPmoIpcOZ',
+		whatsapp: 'https://chat.whatsapp.com/JrT04jkwOf3D1UsjzwDyWo',
 		drive: 'https://drive.google.com/drive/folders/167llDo3ecrfbeglFBKRDwaeF2n-Zs3iP?usp=drive_link'
 	},
 	{ 
 		codice: 'L-10', 
 		nome: 'Lettere, Sapere Umanistico e Formazione',
-		whatsapp: 'https://chat.whatsapp.com/CMNu4KrRw5Z1aGAIid9err',
+		whatsapp: 'https://chat.whatsapp.com/LSCmCkQoN8L9fYo5WYbzOC',
 		drive: 'https://drive.google.com/drive/folders/1dlBjoEWdU6rc-2AS4O6stFjCu5_dT9Ek?usp=drive_link'
 	},
 	{ 
 		codice: 'L-12', 
 		nome: 'Lingue e Mercati',
-		whatsapp: 'https://chat.whatsapp.com/EfmJswqzEOU2CFOBEtD1gc',
+		whatsapp: 'https://chat.whatsapp.com/KI954f149Q4JLR1diw16R7',
 		drive: 'https://drive.google.com/drive/folders/13ce8eXABCSDLt_WWM6B776SDU1gNbGqg?usp=drive_link'
 	},
 	{ 
 		codice: 'L-13', 
 		nome: 'Scienze Biologiche',
-		whatsapp: 'https://chat.whatsapp.com/EeDG7x5BzOf011HyIU8osJ',
+		whatsapp: 'https://chat.whatsapp.com/FsfiuHgQ6Gq8herFCakwjh?mode=wwt',
 		drive: 'https://drive.google.com/drive/folders/1o22FuW0EeVuI22_itYzfKy2-7VtFVCog?usp=drive_link'
 	},
 	{ 
 		codice: 'L-14', 
 		nome: 'Scienze Giuridiche',
-		whatsapp: 'https://chat.whatsapp.com/Exg7OZddELl0YeFMrRzd2Q',
+		whatsapp: 'https://chat.whatsapp.com/HPfIw0v1RPdBOjiEcJN94c',
 		drive: 'https://drive.google.com/drive/folders/1GQfktI8h5eDnO--OE8IkchW_R_K67otN?usp=drive_link'
 	},
 	{ 
 		codice: 'L-15', 
 		nome: 'Scienze Turistiche',
-		whatsapp: 'https://chat.whatsapp.com/JtPfH9UK0zO52VH7G8b2zb',
+		whatsapp: 'https://chat.whatsapp.com/ILsA2SpE76R09BlO18Y95u?mode=wwt',
 		drive: 'https://drive.google.com/drive/folders/1wm4_J8MZoxrC-l-3GeB-4P12PchlnHQK?usp=drive_link'
 	},
 	{ 
 		codice: 'L-16', 
 		nome: 'Scienze dell\'Amministrazione e dell\'Organizzazione',
-		whatsapp: 'https://chat.whatsapp.com/CuaUr4SjXJL0mRL5x2JGLP',
+		whatsapp: 'https://chat.whatsapp.com/BAC2mw08gIlGaZTGXky1fY?mode=wwt',
 		drive: 'https://drive.google.com/drive/folders/1OIw3l9QosuuVTXAfHIzWwRZTzmpMW_fm?usp=drive_link'
 	},
 	{ 
 		codice: 'L-18', 
 		nome: 'Economia Aziendale',
-		whatsapp: 'https://chat.whatsapp.com/K3XePfSWnRxGKMSeXUgD9n',
+		whatsapp: 'https://chat.whatsapp.com/D8pqU1uSt0sKUQDQJu1A9R',
 		drive: 'https://drive.google.com/drive/folders/1Jc8MaUE6QvXrNT7ni8ZMPBHqWc2ylNYS?usp=sharing'
 	},
 	{ 
 		codice: 'L-19', 
 		nome: 'Scienze dell\'Educazione e della Formazione',
-		whatsapp: 'https://chat.whatsapp.com/DS0Hwln15Md07BgsvBxWCh',
+		whatsapp: 'https://chat.whatsapp.com/LouJDJsy53gFP5KBRgaDZG',
 		drive: 'https://drive.google.com/drive/folders/1SdJgKhp9JERCNv9jYu6UTijBBj9DEk9v?usp=drive_link'
 	},
 	{ 
 		codice: 'L-20', 
 		nome: 'Comunicazione e multimedia',
-		whatsapp: 'https://chat.whatsapp.com/HLXAsC6C9Yi8vqWc9v3ePW',
+		whatsapp: 'https://chat.whatsapp.com/GW3K8W3PIMjBJcVJPXGptB',
 		drive: 'https://drive.google.com/drive/folders/1__OpGXuCdNyzNY_6M-pHZaJBOBmB3tDJ?usp=drive_link'
 	},
 	{ 
 		codice: 'L-22', 
 		nome: 'Scienze Motorie',
-		whatsapp: 'https://chat.whatsapp.com/LJC4R1wsIGV5n2amBczu0k',
+		whatsapp: 'https://chat.whatsapp.com/C3gKxWTrKfWEViEKmEfTt1',
 		drive: 'https://drive.google.com/drive/folders/1yUwfERViPNExz2sAglLUbx5XF9JyFSw_?usp=drive_link'
 	},
 	{ 
 		codice: 'L-24', 
 		nome: 'Scienze e Tecniche Psicologiche',
-		whatsapp: 'https://chat.whatsapp.com/DPW2w8HnyPCH886Dmcn7CJ',
+		whatsapp: 'https://chat.whatsapp.com/I0XocKaIRsI1qbxJiIfjw8',
 		drive: 'https://drive.google.com/drive/folders/1TyvQVSjL5jGYhvyb08U6k7Z_nEHFnUFl?usp=sharing'
 	},
 	{ 
 		codice: 'L-26', 
 		nome: 'Scienze dell\'Alimentazione e Gastronomia',
-		whatsapp: 'https://chat.whatsapp.com/GihXsWDLkto3JN0IvAtB5H',
+		whatsapp: 'https://chat.whatsapp.com/JEaLhOtEhDLEsBHVnPvya9',
 		drive: 'https://drive.google.com/drive/folders/1Ar8PtUiQ5LLj2AElLoxabEO_k2_EFYlZ?usp=drive_link'
 	},
 	{ 
 		codice: 'L-31', 
 		nome: 'Informatica per le Aziende Digitali',
-		whatsapp: 'https://chat.whatsapp.com/IhqSardTgycAWhr1c3NiSp',
+		whatsapp: 'https://chat.whatsapp.com/H5zw8eIvhJQ695hBGkSTIw',
 		drive: 'https://drive.google.com/drive/folders/1S1eAghX-x2BAoPg6NWlKqoX2bAQ2ZsC3?usp=drive_link'
 	},
 	{ 
 		codice: 'L-36', 
 		nome: 'Scienze Politiche e Relazioni Internazionali',
-		whatsapp: 'https://chat.whatsapp.com/BueEyv36vGe9P8pl1NUBIE',
+		whatsapp: 'https://chat.whatsapp.com/Jc8APKuaeBW1MRUBC7uIM8?mode=wwt',
 		drive: 'https://drive.google.com/drive/folders/1GnWlecmWjRMTb_B5HJoXDkj9TKoQnB8l?usp=drive_link'
 	},
 	{ 
 		codice: 'L-40', 
 		nome: 'Sociologia e Innovazione',
-		whatsapp: 'https://chat.whatsapp.com/C6qOeGxd3Al8MIvJnFFiBC',
+		whatsapp: 'https://chat.whatsapp.com/LSr6ZzMgMLfAjT5Zc9Txky',
 		drive: 'https://drive.google.com/drive/folders/1Da3nx0i3QPcd1YhPg-C7lTI7CVY494ke?usp=drive_link'
 	},
 	{ 
 		codice: 'L-41', 
 		nome: 'Statistica e Big Data',
-		whatsapp: 'https://chat.whatsapp.com/CnaJqumkyKsHnTbQPIzLe5',
+		whatsapp: 'https://chat.whatsapp.com/DplCNJK4ZM7G2VwFfm3QTO',
 		drive: 'https://drive.google.com/drive/folders/1nvQzcHdblBAuqUGKSeYZnnAyctIwR9TL?usp=drive_link'
 	},
 	{ 
 		codice: 'L-GASTR', 
 		nome: 'Gastronomia, Ospitalità e Territori',
-		whatsapp: 'https://chat.whatsapp.com/GEZzPXfEloo61tdJsMDXmT',
+		whatsapp: 'https://chat.whatsapp.com/KPo135cGrAq5BNwGw2e2VD',
 		drive: 'https://drive.google.com/drive/folders/1-jKhknZ949TePYJTE3ZUs0GqgDn-GowU?usp=drive_link'
 	},
 	{ 
 		codice: 'LMG-01', 
 		nome: 'Giurisprudenza',
-		whatsapp: 'https://chat.whatsapp.com/HdegHUZaldzCe7JC8GrzYL',
+		whatsapp: 'https://chat.whatsapp.com/DEuJfWe9fvB6LO9yv6gwiK',
 		drive: 'https://drive.google.com/drive/folders/1C7nYeDsjEg-OOJdaDic9jCm3hUyfsjIV?usp=drive_link'
 	}
 ];
@@ -156,7 +156,7 @@ const corsiMagistrali = [
 	{ 
 		codice: 'LM-31', 
 		nome: 'Ingegneria Gestionale',
-		whatsapp: 'https://chat.whatsapp.com/D7pED6EmskcAkEDlWLs6Vq'
+		whatsapp: 'https://chat.whatsapp.com/HYjlRmRcxEx0QV5KpaQMa0'
 	},
 	{ 
 		codice: 'LM-39', 
@@ -166,17 +166,17 @@ const corsiMagistrali = [
 	{ 
 		codice: 'LM-47', 
 		nome: 'Management dello Sport e delle Attività Motorie',
-		whatsapp: 'https://chat.whatsapp.com/BJHAppvwWLBHtEb9cAMBAb'
+		whatsapp: 'https://chat.whatsapp.com/CttsmHBUed5EOJ2ebrAvaW'
 	},
 	{ 
 		codice: 'LM-51', 
 		nome: 'Psicologia del Lavoro e delle Organizzazioni',
-		whatsapp: 'https://chat.whatsapp.com/KSexXEGhdKqC0BocA2Q2Xr'
+		whatsapp: 'https://chat.whatsapp.com/KmysQTUnYgV5cMSCQbyCzA'
 	},
 	{ 
 		codice: 'LM-52', 
 		nome: 'Relazioni Internazionali per lo Sviluppo Economico',
-		whatsapp: 'https://chat.whatsapp.com/BAmSFUGEEGS78xYs7FZqCO'
+		whatsapp: 'https://chat.whatsapp.com/Is7vWdYHrXJKUxJXg5zzUY'
 	},
 	{ 
 		codice: 'LM-56', 
@@ -186,12 +186,12 @@ const corsiMagistrali = [
 	{ 
 		codice: 'LM-59', 
 		nome: 'Comunicazione Digitale e Marketing',
-		whatsapp: 'https://chat.whatsapp.com/E6NYMpSybW50CxIMIyaGEY'
+		whatsapp: 'https://chat.whatsapp.com/L5g60isaJsb4Qom5xsv8HL'
 	},
 	{ 
 		codice: 'LM-61', 
 		nome: 'Scienze della Nutrizione Umana',
-		whatsapp: 'https://chat.whatsapp.com/KQ29HfBatNS2IP7GMJKkA3'
+		whatsapp: 'https://chat.whatsapp.com/FcyMCKFWyxQIchONM0QwQh'
 	},
 	{ 
 		codice: 'LM-67', 
@@ -201,12 +201,12 @@ const corsiMagistrali = [
 	{ 
 		codice: 'LM-77', 
 		nome: 'Management',
-		whatsapp: 'https://chat.whatsapp.com/IWHOrnWi4XhI2DIi69x72J'
+		whatsapp: 'https://chat.whatsapp.com/FCHVrvmVngQ0SstTQXgTOq'
 	},
 	{ 
 		codice: 'LM-85', 
 		nome: 'Scienze Pedagogiche',
-		whatsapp: 'https://chat.whatsapp.com/Htwmtx2LgfMDsiRdSnxZz1'
+		whatsapp: 'https://chat.whatsapp.com/K4tsoBP22xF6GcNtG91LKL'
 	}
 ];
 

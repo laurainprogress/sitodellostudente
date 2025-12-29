@@ -5,39 +5,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
-	<!-- FAVICON E METADATA -->
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
 	<link rel="shortcut icon" href="favicon.png">
 	
-	<!-- Meta per SEO e social -->
-	<meta name="description" content="Quiz di orientamento universitario - Scopri quale area di studio è più adatta a te">
-	<meta name="keywords" content="quiz orientamento, università, test attitudine, scelta corso laurea">
-	<meta name="author" content="Il Gruppo dello Studente">
+	<meta name="description" content="Quiz di orientamento universitario NOVA UNI. Scopri quale corso di laurea Pegaso, Mercatorum o San Raffaele è più adatto a te.">
+	<meta name="keywords" content="quiz orientamento, test attitudinale università, scelta corso laurea, pegaso, mercatorum">
+	<meta name="author" content="Nova Uni">
+	<link rel="canonical" href="https://tuousername.github.io/tuo-repo/quiz.html">
 	
-	<!-- Open Graph per social media -->
-	<meta property="og:title" content="Quiz Orientamento - Il Gruppo dello Studente">
-	<meta property="og:description" content="Scopri quale percorso universitario fa per te con il nostro quiz di orientamento">
+	<meta property="og:title" content="Quiz Orientamento - NOVA UNI">
+	<meta property="og:description" content="Non sai cosa scegliere? Fai il test e scopri il corso di laurea adatto a te.">
 	<meta property="og:type" content="website">
 	
-	<title>Quiz di Orientamento Universitario - Il Gruppo dello Studente</title>
+	<title>Quiz di Orientamento - NOVA UNI</title>
 	<link rel="stylesheet" href="style.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-	<!-- ========================================================== -->
-	<!-- MODIFICA 1: SCRIPT DI COOKIEYES INSERITO -->
-	<!-- ========================================================== -->
-	<!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/a05a481591647122ace6272f/script.js"></script> <!-- End cookieyes banner -->
-
-</head>
+	<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/a05a481591647122ace6272f/script.js"></script> </head>
 <body class="quiz-body">
 	<header>
 		<nav class="navbar">
 			<div class="nav-container">
 				<div class="nav-logo">
-					<i class="fas fa-graduation-cap"></i>
-					<span>@laura_inprogress</span>
+					<img src="logo-novauni-header.png" alt="NOVA UNI Polo di Orientamento">
 				</div>
 				<ul class="nav-menu">
 					<li><a href="index.html" class="nav-link">Home</a></li>
@@ -45,10 +37,10 @@
 					<li><a href="quiz.html" class="nav-link active">
 						<i class="fas fa-compass"></i>
 						<span>Quiz Orientamento</span>
-						<li><a href="approfondimenti.html" class="nav-link">
-							<i class="fas fa-book-open"></i>
-							<span>News</span>
-						</a></li>
+					</a></li>
+					<li><a href="approfondimenti.html" class="nav-link">
+						<i class="fas fa-book-open"></i>
+						<span>News</span>
 					</a></li>
 					<li><button id="theme-toggle" class="theme-toggle">
 						<i class="fas fa-moon"></i>
@@ -63,27 +55,39 @@
 		</nav>
 	</header>
 
+	<section class="partners-bar">
+		<div class="container">
+			<p class="partners-title">Polo di Orientamento in collaborazione con</p>
+			<div class="partners-logos">
+				<img src="partner-pegaso.png" alt="Università Telematica Pegaso" class="partner-logo">
+				<img src="partner-mercatorum.png" alt="Universitas Mercatorum" class="partner-logo">
+				<img src="partner-sanraffaele.png" alt="Università San Raffaele Roma" class="partner-logo">
+				<img src="partner-aulab.png" alt="Aulab" class="partner-logo">
+				<img src="partner-sole24.png" alt="Il Sole 24 Ore" class="partner-logo">
+			</div>
+		</div>
+	</section>
+
 	<main>
 		<div class="quiz-container">
-			<!-- Intro del Quiz -->
 			<div id="quiz-intro" class="quiz-intro">
 				<div class="quiz-header">
-					<h1><i class="fas fa-compass"></i> Quiz di Orientamento Universitario</h1>
-					<p>Scopri quale area di studio è più adatta alle tue passioni e attitudini!</p>
+					<h1><i class="fas fa-compass"></i> Quiz di Orientamento</h1>
+					<p>Scopri l'area di studio perfetta per le tue attitudini e il tuo futuro professionale.</p>
 				</div>
 				
 				<div class="quiz-card">
 					<div class="quiz-info">
-						<h2>Come funziona il quiz?</h2>
+						<h2>Come funziona il test?</h2>
 						<ul class="quiz-info-list">
-							<li><i class="fas fa-question-circle"></i> <strong>15 domande</strong> studiate per capire le tue inclinazioni</li>
-							<li><i class="fas fa-clock"></i> <strong>5-10 minuti</strong> per completarlo</li>
-							<li><i class="fas fa-chart-pie"></i> <strong>5 aree di studio</strong> per scoprire quella più adatta a te</li>
-							<li><i class="fas fa-list"></i> <strong>Corsi consigliati</strong> in base al tuo profilo</li>
+							<li><i class="fas fa-question-circle"></i> <strong>15 domande</strong> sulle tue preferenze</li>
+							<li><i class="fas fa-clock"></i> <strong>5 minuti</strong> di tempo stimato</li>
+							<li><i class="fas fa-chart-pie"></i> <strong>Profilo personalizzato</strong> con i corsi consigliati</li>
+							<li><i class="fas fa-user-graduate"></i> <strong>Consulenza gratuita</strong> sui risultati</li>
 						</ul>
 						
 						<div class="quiz-areas">
-							<h3>Le aree che esploreremo:</h3>
+							<h3>Le aree didattiche del Polo:</h3>
 							<div class="areas-grid">
 								<div class="area-preview">
 									<i class="fas fa-atom"></i>
@@ -116,7 +120,6 @@
 				</div>
 			</div>
 
-			<!-- Quiz Content -->
 			<div id="quiz-content" style="display: none;">
 				<div class="quiz-progress">
 					<div class="quiz-progress-bar" id="progress-bar">
@@ -143,21 +146,20 @@
 				</div>
 			</div>
 
-			<!-- Quiz Results -->
 			<div id="quiz-results" style="display: none;">
 				<div class="quiz-card quiz-results">
 					<div class="results-icon" id="results-icon">
 						<i class="fas fa-trophy"></i>
 					</div>
 					
-					<h2 class="results-title">Il tuo profilo è stato determinato!</h2>
+					<h2 class="results-title">Ecco il tuo profilo ideale!</h2>
 					
 					<div class="results-area" id="results-area">
 						<h3 id="area-title"></h3>
 						<p class="results-description" id="area-description"></p>
 						
 						<div class="recommended-courses">
-							<h4>Corsi di laurea consigliati per te:</h4>
+							<h4>Corsi di laurea NOVA UNI consigliati:</h4>
 							<ul id="recommended-courses-list"></ul>
 						</div>
 					</div>
@@ -166,7 +168,7 @@
 						<h3 id="secondary-area-title"></h3>
 						<p class="results-description" id="secondary-area-description"></p>
 						<div class="recommended-courses">
-							<h4>Altri corsi che potrebbero interessarti:</h4>
+							<h4>Alternative interessanti:</h4>
 							<ul id="secondary-courses-list"></ul>
 						</div>
 					</div>
@@ -174,14 +176,14 @@
 					<div class="quiz-restart">
 						<button class="quiz-restart-btn" onclick="restartQuiz()">
 							<i class="fas fa-redo"></i>
-							Rifai il Quiz
+							Rifai il Test
 						</button>
 					</div>
 					
 					<div style="margin-top: 30px;">
-						<button onclick="openInfoForm()" class="quiz-btn quiz-btn-next" style="display: inline-flex;">
-							Richiedi Informazioni
-							<i class="fas fa-info-circle"></i>
+						<button onclick="openInfoForm()" class="quiz-btn quiz-btn-next" style="display: inline-flex; background-color: #25D366; color: white;">
+							Parla con un Orientatore
+							<i class="fab fa-whatsapp"></i>
 						</button>
 					</div>
 				</div>
@@ -193,25 +195,25 @@
 		<div class="container">
 			<div class="footer-content">
 				<div class="footer-main">
-					<p>Creato da 
-						<a href="https://github.com/Gabro23" 
-						   target="_blank" 
+					<p>Creato da 
+						<a href="https://github.com/Gabro23" 
+						   target="_blank" 
+						   rel="noopener noreferrer"
 						   class="github-link"
 						   title="Profilo GitHub">
 							<i class="fab fa-github"></i>
 							Gabriele Minissale
-						</a> 
-						per la comunità studentesca
+						</a> 
+						per NOVA UNI Polo di Orientamento
 					</p>
-
 					<p style="margin-top: 10px;"><a href="cookie-policy.html" title="Cookie Policy">Cookie Policy</a></p>
 				</div>
 				
 				<div class="social-links">
-					<h4>Seguimi sui social</h4>
+					<h4>Seguici sui social</h4>
 					<div class="social-icons">
-						<a href="https://www.tiktok.com/@laura_inprogress?_t=ZN-8xJ8P3zfkrX&_r=1" 
-						   target="_blank" 
+						<a href="https://www.tiktok.com/@laura_inprogress?_t=ZN-8xJ8P3zfkrX&_r=1" 
+						   target="_blank" 
 						   rel="noopener noreferrer"
 						   class="social-link tiktok"
 						   title="Seguici su TikTok">
@@ -219,8 +221,8 @@
 							<span>TikTok</span>
 						</a>
 						
-						<a href="https://www.instagram.com/lalli_inprogress?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
-						   target="_blank" 
+						<a href="https://www.instagram.com/lalli_inprogress?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+						   target="_blank" 
 						   rel="noopener noreferrer"
 						   class="social-link instagram"
 						   title="Seguici su Instagram">
@@ -228,8 +230,7 @@
 							<span>Instagram</span>
 						</a>
 					</div>
-					
-					<p class="social-desc">Per consigli di studio e motivazione!</p>
+					<p class="social-desc">Resta aggiornato su scadenze e opportunità!</p>
 				</div>
 			</div>
 		</div>
@@ -237,26 +238,25 @@
 
 	<script src="script.js"></script>
 	<script src="quiz.js"></script>
-	<!-- CODICE BOT -->
+	
 	<script>
-	  (function (w, d, s, o, f, js, fjs) {
+	  (function (w, d, s, o, f, js, fjs) {
 		w["botsonic_widget"] = o;
 		w[o] =
-		  w[o] ||
-		  function () {
+		  w[o] ||
+		  function () {
 			(w[o].q = w[o].q || []).push(arguments);
-		  };
+		  };
 		(js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
 		js.id = o;
 		js.src = f;
 		js.async = 1;
 		fjs.parentNode.insertBefore(js, fjs);
-	  })(window, document, "script", "Botsonic", "https://widget.botsonic.com/CDN/botsonic.min.js");
-	  Botsonic("init", {
+	  })(window, document, "script", "Botsonic", "https://widget.botsonic.com/CDN/botsonic.min.js");
+	  Botsonic("init", {
 		serviceBaseUrl: "https://api-bot.writesonic.com",
 		token: "4b19d0e4-7c48-4a3f-878a-dc149f7165fc",
-	  });
+	  });
 	</script>
-	<!-- FINE CODICE BOT -->
 </body>
 </html>

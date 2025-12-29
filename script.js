@@ -493,7 +493,7 @@ function openInfoForm() {
 	console.log('Apertura form informazioni iscrizioni');
 	
 	// Apri il link in una nuova finestra/tab
-	window.open(' https://api.whatsapp.com/send/?phone=393384370456&text&type=phone_number&app_absent=0', '_blank', 'noopener,noreferrer');
+	window.open('https://wa.me/3793332878', '_blank', 'noopener,noreferrer');
 	
 	// Opzionale: Salva in localStorage per statistiche
 	const clicks = localStorage.getItem('infoFormClicks') || 0;
